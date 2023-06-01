@@ -1,0 +1,38 @@
+###
+# @name createContact
+POST https://cse-341-h18v.onrender.com/contact HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "Vitor 4",
+  "lastName": "Barros",
+  "email": "vitor@teste.com",
+  "favoriteColor": "red",
+  "birthday": "1991-10-04"
+}
+
+###
+# @name getContactById
+GET https://cse-341-h18v.onrender.com/contact/64790e290f90ff14dc7deb62 HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "Vitor",
+  "lastName": "Barros",
+  "email": "vitor@teste.com",
+  "favoriteColor": "red",
+  "birthday": "1991-10-04"
+}
+
+###
+# @name getContacts
+GET https://cse-341-h18v.onrender.com/contact HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "Vitor",
+  "lastName": "Barros",
+  "email": "vitor@teste.com",
+  "favoriteColor": "red",
+  "birthday": "1991-10-04"
+}
