@@ -4,12 +4,30 @@ POST https://cse-341-h18v.onrender.com/contact HTTP/1.1
 Content-Type: application/json
 
 {
-  "firstName": "Vitor 4",
+  "firstName": "Vitor5",
   "lastName": "Barros",
   "email": "vitor@teste.com",
   "favoriteColor": "red",
   "birthday": "1991-10-04"
 }
+
+###
+# @name udpateContact
+PUT https://cse-341-h18v.onrender.com/contact/647fe1bb309dad3aa8eb432b HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "Vitor Updated",
+  "lastName": "Barros",
+  "email": "vitor@teste.com",
+  "favoriteColor": "red",
+  "birthday": "1991-10-04"
+}
+
+###
+# @name deleteContact
+DELETE https://cse-341-h18v.onrender.com/contact/647fe1bb309dad3aa8eb432b HTTP/1.1
+Content-Type: application/json
 
 ###
 # @name getContactById

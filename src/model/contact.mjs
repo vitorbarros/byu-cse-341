@@ -21,6 +21,29 @@ export default class Contact {
       birthday: this.birthday,
     });
 
+  update = async ({ id }) =>
+    client
+      .db(envs.MONGO_DB_NAME)
+      .collection(this.collection)
+      .updateOne(
+        { _id: new ObjectId(id) },
+        {
+          $set: {
+            firstName: this.firstName,
+            lastName: this.lastName,
+            email: this.email,
+            favoriteColor: this.favoriteColor,
+            birthday: this.birthday,
+          },
+        },
+      );
+
+  delete = ({ id }) =>
+    client
+      .db(envs.MONGO_DB_NAME)
+      .collection(this.collection)
+      .deleteOne({ _id: new ObjectId(id) });
+
   findBy = ({ field, value }) => {
     let parsedValue = value;
     if (field === '_id') {

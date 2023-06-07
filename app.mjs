@@ -23,6 +23,8 @@ app.get('/', (req, res) => {
 });
 
 app.post('/contact', cFactory.create);
+app.put('/contact/:id', cFactory.update);
+app.delete('/contact/:id', cFactory.delete);
 app.get('/contact/:id', cFactory.findOne);
 app.get('/contact', cFactory.findAll);
 
